@@ -11,6 +11,8 @@ import Ticket from '../pages/Ticket'
 import Train from '../pages/Train'
 import Footer from './Footer'
 
+import TicketDetail from '../pages/Ticket/Detail'
+
 const { Content } = Layout
 export default class Index extends Component {
 	render() {
@@ -24,7 +26,9 @@ export default class Index extends Component {
 							<Route path='/flight' component={Flight} />
 							<Route path='/hotel' component={Hotel} />
 							<Route path='/route/:type' component={RoutePage} />
-							<Route path='/ticket' component={Ticket} />
+							<Route exact path='/ticket' component={Ticket} />
+							<Route path='/ticket/detail' component={TicketDetail} />
+
 							<Route path='/train' component={Train} />
 						</Switch>
 					</div>
