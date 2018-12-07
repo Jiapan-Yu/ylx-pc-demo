@@ -1,12 +1,34 @@
 import React, { Component } from 'react'
-import { Menu, Icon } from 'antd'
+import { Menu, Icon, Dropdown } from 'antd'
 import navigation from './navigation.json'
 import { withRouter } from 'react-router-dom'
 import './index.less'
-
+const dropdownList = [
+	{ path: 'route/1', title: '周边游' },
+	{ path: 'route/2', title: '国内游' },
+	{ path: 'route/3', title: '出境游' },
+	{ path: 'ticket', title: '景点门票' },
+	{ path: 'hotel', title: '酒店' }
+]
 class Navigation extends Component {
+	state = {
+		seachIndex: 0
+	}
+
+	menu = () => (
+		<Menu style={{ maxWidth: 90, marginLeft: 20 }}>
+			{
+				dropdownList.map(({ path, title }, seachIndex) => (
+					<Menu.Item key={path} onClick={() => this.setState({ seachIndex })}>
+						{title}
+					</Menu.Item>
+				))
+			}
+		</Menu>
+	)
 	render() {
 		const { location: { pathname } } = this.props
+		const { seachIndex } = this.state
 		let curr = navigation.filter(({ path }) => path.substr(1) && pathname.indexOf(path.substr(1)) > -1)
 		let currPath = curr[0] ? curr[0].path : '/'
 		return (
@@ -26,7 +48,12 @@ class Navigation extends Component {
 						<div className='city'>武汉 <Icon type="down" /></div>
 					</div>
 					<div className='search-box'>
-						<div className='type'>周边游<Icon type="caret-down" /></div>
+						<Dropdown overlay={this.menu()} placement="bottomCenter">
+							<div className='type'>
+								<span className='type-text'>{dropdownList[seachIndex].title}</span>
+								<Icon type="caret-down" />
+							</div>
+						</Dropdown>
 						<input type="text" placeholder='请输入景点、主题、目的地' />
 						<Icon className='search-btn' type="search" />
 					</div>
