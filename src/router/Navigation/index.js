@@ -7,6 +7,8 @@ import './index.less'
 class Navigation extends Component {
 	render() {
 		const { location: { pathname } } = this.props
+		let curr = navigation.filter(({ path }) => path.substr(1) && pathname.indexOf(path.substr(1)) > -1)
+		let currPath = curr[0] ? curr[0].path : '/'
 		return (
 			<div>
 				<div className="top-box">
@@ -36,7 +38,7 @@ class Navigation extends Component {
 				<div className="menu-list">
 					<Menu
 						mode="horizontal"
-						defaultSelectedKeys={[pathname]}
+						defaultSelectedKeys={[currPath]}
 						style={{ lineHeight: '40px' }}
 					>
 						{

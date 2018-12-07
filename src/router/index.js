@@ -6,7 +6,10 @@ import Navigation from './Navigation'
 import Home from '../pages/Home'
 import Flight from '../pages/Flight'
 import Hotel from '../pages/Hotel'
+
 import RoutePage from '../pages/Route'
+import RouteList from '../pages/Route/RouteList'
+
 import Ticket from '../pages/Ticket'
 import Train from '../pages/Train'
 import Footer from './Footer'
@@ -23,7 +26,10 @@ export default class Index extends Component {
 							<Route exact path='/' component={Home} />
 							<Route path='/flight' component={Flight} />
 							<Route path='/hotel' component={Hotel} />
-							<Route path='/route/:type' component={RoutePage} />
+
+							<Route exact path='/route/:type' component={RoutePage} />
+							<Route path='/route/:type/list' component={RouteList} />
+
 							<Route path='/ticket' component={Ticket} />
 							<Route path='/train' component={Train} />
 						</Switch>
