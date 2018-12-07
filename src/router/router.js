@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './index.less'
 import Login from '../pages/Login'
-import Navigation from './navigation'
+import Index from './index'
 
 export default class Router extends React.Component {
 	render() {
@@ -10,7 +10,7 @@ export default class Router extends React.Component {
 			<BrowserRouter>
 				<Switch>
 					<Route path='/login' component={Login} />
-					<Navigation />
+					<Index />
 				</Switch>
 			</BrowserRouter>
 		)

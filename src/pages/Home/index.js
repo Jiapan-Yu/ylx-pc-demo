@@ -1,24 +1,22 @@
 import React, { Component } from 'react'
-import { Button } from 'antd'
-import moment from 'moment'
-import { inject, observer } from 'mobx-react'
+import Carousel from '../../common/Carousel'
+import Stencil from '../../common/Stencil'
 import './index.less'
 
-@inject('testStore')
-@observer
-class App extends Component {
+class Home extends Component {
 
 	render() {
-		const { num } = this.props.testStore
 		return (
-			<div className="App">
-				<Button onClick={() => this.props.testStore.add()} type="primary">Button</Button>
-				{num}
-				<div className='teee'>{moment().format('dddd')}</div>
-				<i className="iconfont">&#xe683;</i>
+			<div className="home-page-wrap">
+				<Carousel />
+				<Stencil type={1} />
+				<Stencil type={2} />
+				<Stencil type={3} />
+				<Stencil type={3} />
+				<Stencil type={3} />
 			</div>
 		)
 	}
 }
 
-export default App
+export default Home

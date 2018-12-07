@@ -1,0 +1,56 @@
+@import '../../colors.less';
+.stencil-wrap {
+  width: 1200px;
+  height: 375px;
+  margin: 16px auto;
+  background-color: #fff;
+  border: 1px solid #eee;
+  overflow: hidden;
+  .top-menu {
+    width: 100%;
+    height: 50px;
+    padding: 0px 24px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    .title {
+      height: 50px;
+      font-size: 18px;
+      color: #3D3D3D;
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      img {
+        margin-right: 11px;
+      }
+    }
+    .menu-list-box {
+      flex: 1;
+      display: flex;
+      height: 28px;
+      line-height: 28px;
+      div {
+        margin: 0 16px;
+      }
+      .active {
+        color: @themeColor;
+        border-bottom: 2px solid @themeColor;
+      }
+    }
+    .more {
+      color: @themeColor;
+    }
+  }
+  .content-box {
+    display: flex;
+    .content {
+      flex: 1;
+      padding: 10px;
+      height: 100%;
+      overflow: hidden;
+    }
+    .publicize-vertical {
+      margin: 20px 20px 20px 0px;
+    }
+  }
+}
