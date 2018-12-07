@@ -5,26 +5,28 @@ export default class Footer extends Component {
 	render() {
 		return (
 			<div className='foot-box'>
-				<div className="top">
-					<div>
-						<img src="http://image.yjylx.com/ec/images/common/piao.png" alt="" />
-						购票保障
-					</div>
-					<div>
-						<img src="http://image.yjylx.com/ec/images/common/chu.png" alt="" />
-						出行保障
-					</div>
-					<div>
-						<img src="http://image.yjylx.com/ec/images/common/ticket.png" alt="" />
-						标准退改签
-					</div>
-					<div>
-						<img src="http://image.yjylx.com/ec/images/common/baohu.png" alt="" />
-						隐私保障
-					</div>
-					<div>
-						<img src="http://image.yjylx.com/ec/images/common/after.png" alt="" />
-						售后无忧
+				<div className="top-box">
+					<div className="top">
+						<div>
+							<img src="http://image.yjylx.com/ec/images/common/piao.png" alt="" />
+							购票保障
+						</div>
+						<div>
+							<img src="http://image.yjylx.com/ec/images/common/chu.png" alt="" />
+							出行保障
+						</div>
+						<div>
+							<img src="http://image.yjylx.com/ec/images/common/ticket.png" alt="" />
+							标准退改签
+						</div>
+						<div>
+							<img src="http://image.yjylx.com/ec/images/common/baohu.png" alt="" />
+							隐私保障
+						</div>
+						<div>
+							<img src="http://image.yjylx.com/ec/images/common/after.png" alt="" />
+							售后无忧
+						</div>
 					</div>
 				</div>
 				<div className="bottom">
@@ -63,7 +65,7 @@ export default class Footer extends Component {
 							<div>常见问题</div>
 						</div>
 						<div className='qrcode'>
-							<img src="http://image.yjylx.com/ec/images/common/erweima.jpg" alt=""/>
+							<img src="http://image.yjylx.com/ec/images/common/erweima.jpg" alt="" />
 							<div>扫一扫，关注微信公众号</div>
 							<div>更多优惠，等你来拿</div>
 							<div>商家热线：4009-646-567</div>
