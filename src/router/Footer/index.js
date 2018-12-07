@@ -71,7 +71,9 @@ export default class Footer extends Component {
 							<div>商家热线：4009-646-567</div>
 						</div>
 					</div>
-					<div className='copy-right'>Copyright © 2017 yjylx.com All Rights Reserved.Power by yjylx Inc. 鄂ICP备16019823号</div>
+					<div className='copy-right'>
+						<span>Copyright © 2017 yjylx.com All Rights Reserved.Power by yjylx Inc. 鄂ICP备16019823号</span>
+					</div>
 				</div>
 			</div>
 		)
