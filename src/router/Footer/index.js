@@ -9,7 +9,7 @@ export default class Footer extends Component {
 					<div className="top">
 						<div>
 							<img src="http://image.yjylx.com/ec/images/common/piao.png" alt="" />
-							购票保障
+							出票保障
 						</div>
 						<div>
 							<img src="http://image.yjylx.com/ec/images/common/chu.png" alt="" />
