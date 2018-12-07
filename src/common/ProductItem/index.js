@@ -11,7 +11,7 @@ export default class ProductItem extends Component {
 				<div className='base-box'>
 					<div className="product-name">&lt;华东五市-苏州园华东五市-苏州园林-杭州苏州园林-杭州-乌镇双动5日游&gt;</div>
 					<div>
-						<div><span className='price'>¥1280</span>起</div>
+						<div><span className='price'>¥<span className='sup'>1280</span></span>起</div>
 						<Button className="btn">立即抢购</Button>
 					</div>
 				</div>

@@ -1,0 +1,57 @@
+.route-item-wrap {
+  height: 200px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  img {
+    width: 300px;
+    height: 100%;
+  }
+  .base-info {
+    flex: 1;
+    padding: 10px;
+    .goods-name {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .badge-list {
+      line-height: 40px;
+      span {
+        margin-right: 8px;
+        font-size: 14px;
+        padding: 3px 8px;
+        border-radius: 5px;
+      }
+      :first-child {
+        border: 1px solid #2ECC98;
+        color: #2ECC98;
+      }
+      :last-child {
+        border: 1px solid #FCC227;
+        color: #FCC227;
+      }
+    }
+    .detail-item {
+      line-height: 25px;
+      .tips {
+        font-weight: bold;
+      }
+      :nth-child(2) {
+        margin-right: 20px;
+      }
+    }
+  }
+  .operational {
+    width: 180px;
+    text-align: center;
+    margin: auto;
+    .btn {
+      margin-top: 10px;
+      height: 40px;
+      background-image: linear-gradient(-135deg, #F36F29 0%, #E43C12 100%);
+      border-radius: 5px;
+      color: #fff;
+    }
+  }
+}

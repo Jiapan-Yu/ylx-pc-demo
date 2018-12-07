@@ -45,11 +45,16 @@
   align-items: center;
   .type {
     padding: 0 20px;
-    :after{
-      content: " ";
-      border: 2px solid @themeColor;
-      margin-left: 5px;
+    .type-text {
+      width: 70px;
+      display: inline-block;
+      text-align: center;
     }
+  }
+  .type:after{
+    content: " ";
+    border: 2px solid @themeColor;
+    margin-left: 5px;
   }
   input {
     background: none;  
