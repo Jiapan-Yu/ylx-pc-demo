@@ -9,17 +9,27 @@ class TicketDetail extends Component {
 
 	componentDidMount() {
 		window.addEventListener('scroll', this.scrollHandler)
+
+		document.onmousemove = e => {
+			document.getElementsByClassName('position')[0].innerHTML = `pageX: ${e.pageX}, pageY: ${e.pageY}`
+		}
+	}
+
+	switch = (i) => () => {
+		const distance = document.getElementById(`info${i}`).offsetTop - 60
+		window.scrollTo(0, distance)
 	}
 
 	scrollHandler = () => {
 		const t = document.documentElement.scrollTop || document.body.scrollTop
+		console.log(t)
 		let topId, info0, info1, info2 = 0
 		topId = document.getElementById('info0')
 
 		if (topId) { // 能不能被滚动
-			info0 = document.getElementById('info0') ? document.getElementById('info0').offsetTop - 75 : 0
-			info1 = document.getElementById('info1') ? document.getElementById('info1').offsetTop - 75 : 0
-			info2 = document.getElementById('info2') ? document.getElementById('info2').offsetTop - 75 : 0
+			info0 = document.getElementById('info0') ? document.getElementById('info0').offsetTop - 65 : 0
+			info1 = document.getElementById('info1') ? document.getElementById('info1').offsetTop - 65 : 0
+			info2 = document.getElementById('info2') ? document.getElementById('info2').offsetTop - 65 : 0
 
 			if (t >= info0 && t < info1) {
 				this.setState({
@@ -45,6 +55,7 @@ class TicketDetail extends Component {
 		const { menuIndex } = this.state
 		return (
 			<div className="ticket-detail-wrap">
+				<div className="position"></div>
 				<div className="ticket-detail-top">
 					<img src={require('../../../images/ticket_detail.jpg')} alt="图片" />
 					<div className="desc">
@@ -91,10 +102,10 @@ class TicketDetail extends Component {
 
 				<div id="infolist" className="info">
 					{infoList.map((value, i) => {
-						return <span key={i} className={`item ${menuIndex === i ? 'curr' : ''}`}>{value}</span>
+						return <span key={i} onClick={this.switch(i)} className={`item ${menuIndex === i ? 'curr' : ''}`}>{value}</span>
 					})}
 				</div>
-				<div><br />
+				<div> <br />
 					<div id="info0" className="info-title">预订须知</div>
 					<br />
 					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut,

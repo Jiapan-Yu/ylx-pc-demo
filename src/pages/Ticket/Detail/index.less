@@ -3,6 +3,17 @@
 .ticket-detail-wrap {
   width: 1200px;
   margin: 0 auto;
+  div {
+    cursor: default;
+  }
+  .position {
+    position: fixed;
+    z-index: 10;
+    right: 20px;
+    bottom: 20px;
+    background-color: lightgray;
+    color: white;
+  }
   .ticket-detail-top {
     background-color: #FFFFFF;
     height: 406px;
@@ -72,6 +83,7 @@
       display: inline-block;
       margin-right: 10px;
       padding: 10px 15px;
+      cursor: pointer;
       &.curr{
         background-color: @themeColor;
         color: #fff;
