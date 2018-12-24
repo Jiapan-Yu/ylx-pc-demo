@@ -16,6 +16,8 @@ import Footer from './Footer'
 
 import TicketDetail from '../pages/Ticket/Detail'
 
+import Grid from '../pages/Grid'
+
 const { Content } = Layout
 export default class Index extends Component {
 	render() {
@@ -36,6 +38,8 @@ export default class Index extends Component {
 							<Route path='/ticket/detail' component={TicketDetail} />
 
 							<Route path='/train' component={Train} />
+
+							<Route path='/grid' component={Grid} />
 						</Switch>
 					</div>
 				</Content>
